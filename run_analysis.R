@@ -82,27 +82,5 @@ write.table(result, "data_with_means.txt") # write out the 2nd dataset
 data <- read.table("./data_with_means.txt")
 data[1:12, 1:3]
 
-#--------------------------------------------------------------------------
 
-#Merge the training and the test sets
-#Concatenate the data tables.
-dtSubject <- rbind(dtSubjectTrain, dtSubjectTest)
-setNames(dtSubject, "V1", "subject")
-dtActivity <- rbind(dtActivityTrain, dtActivityTest)
-setnames(dtActivity, "V1", "activityNum")
-dt <- rbind(dtTrain, dtTest)
-setNames("V1","subject")
-setNames("V1", "activityNum")
-#Merge columns.
-dtSubject <- cbind(dtSubject, dtActivity)
-dt <- cbind(dtSubject, dt)
-#Extract only the mean and standard deviation
-#Read the features.txt file. 
-#This tells which variables in dt are measurements for the mean and standard deviation.
-#Set path to feature file
-setwd("F:/Data Science Speciality Track/Getting and Cleaning Data/Project/getdata-projectfiles-UCI HAR Dataset (1)/UCI HAR Dataset")
-dtFeatures <- read.table("features.txt")
 
-setNames(names(dtFeatures), c("featureNum", "featureName"))
-#Subset only measurements for the mean and standard deviation.
-meanStdIndices <- grep("mean\\(\\)|std\\(\\)", dtFeatures[, 2])
