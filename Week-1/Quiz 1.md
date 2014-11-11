@@ -7,6 +7,7 @@
 and load the data into R. The code book, describing the variable names is here:
 
    https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FPUMSDataDict06.pdf 
+   
       # set up defualt directory
       setwd('H:/Desktop/Data Specialist/Getting Cleaning Data/week 1')
       getwd()
