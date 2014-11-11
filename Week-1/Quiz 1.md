@@ -65,6 +65,9 @@ Use the data you loaded from Question 1. Consider the variable FES in the code b
 ####Question 3
 
 https://github.com/Xiaodan/Coursera-Getting-and-Cleaning-Data/blob/master/week1/week1.R
+
 https://github.com/rfoxfa/Getting_and_Cleaning_Data/blob/master/Quiz_1.md
+
+https://github.com/benjamin-chan/GettingAndCleaningData/blob/master/Quiz1/quiz1.md
 
 
