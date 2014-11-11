@@ -5,4 +5,10 @@
     > sum(!is.na(microData$VAL[microData$VAL==24]))
     > [1] 53
     
-    
+list.files("./")
+microData <- read.table("./data.csv", sep=",", header=TRUE)
+head(microData)
+dim(microData) # 6496x188
+sum(!is.na(microData$VAL[microData$VAL==24])) # 53
+
+
