@@ -62,6 +62,9 @@ Use the data you loaded from Question 1. Consider the variable FES in the code b
 **Tidy data has one variable per column.**
 
 --------------------------------------------
+####Question 3
 
+https://github.com/Xiaodan/Coursera-Getting-and-Cleaning-Data/blob/master/week1/week1.R
+https://github.com/rfoxfa/Getting_and_Cleaning_Data/blob/master/Quiz_1.md
 
 
