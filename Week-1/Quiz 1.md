@@ -7,22 +7,22 @@
 and load the data into R. The code book, describing the variable names is here:
 
    https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FPUMSDataDict06.pdf 
-   
-   # set up defualt directory
-   setwd('H:/Desktop/Data Specialist/Getting Cleaning Data/week 1')
-   getwd()
-   # set the url path
-   fileUrl <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv'
-   # download file
-   download.file(fileUrl, destfile="./data.csv")
-   
-   list.files("./")
-   microData <- read.table("./data.csv", sep=",", header=TRUE)
-   head(microData)
-   dim(microData) # 6496x188
-   sum(!is.na(microData$VAL[microData$VAL==24])) 
-   #[1] 53
+      # set up defualt directory
+      setwd('H:/Desktop/Data Specialist/Getting Cleaning Data/week 1')
+      getwd()
+      # set the url path
+      fileUrl <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv'
+      # download file
+      download.file(fileUrl, destfile="./data.csv")
+      
+      list.files("./")
+      microData <- read.table("./data.csv", sep=",", header=TRUE)
+      head(microData)
+      dim(microData) # 6496x188
+      sum(!is.na(microData$VAL[microData$VAL==24])) 
+      #[1] 53
 
+```
 # refer to the parameter book about the VAL definition and details
 # VAL 2
 # Property value
@@ -51,7 +51,7 @@ and load the data into R. The code book, describing the variable names is here:
 # 22 .$500000 - $749999
 # 23 .$750000 - $999999
 # 24 .$1000000+
-
+```
 
 ----------------------------------------------------------------------------    
 
