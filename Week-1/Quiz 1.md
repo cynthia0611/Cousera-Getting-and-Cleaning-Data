@@ -19,7 +19,8 @@ and load the data into R. The code book, describing the variable names is here:
       list.files("./")
       microData <- read.table("./data.csv", sep=",", header=TRUE)
       head(microData)
-      dim(microData) # 6496x188
+      dim(microData) 
+      # 6496x188
       sum(!is.na(microData$VAL[microData$VAL==24])) 
       #[1] 53
 
@@ -55,8 +56,12 @@ and load the data into R. The code book, describing the variable names is here:
 ```
 
 ----------------------------------------------------------------------------    
+####Question 2
+Use the data you loaded from Question 1. Consider the variable FES in the code book. Which of the "tidy data" principles does this variable violate? 
 
+**Tidy data has one variable per column.**
 
+--------------------------------------------
 
 
 
