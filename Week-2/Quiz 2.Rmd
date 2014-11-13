@@ -28,7 +28,7 @@ myapp <- oauth_app("github", "your Client ID on your Github application page","C
 #Waiting for authentication in browser...
 #Press Esc/Ctrl + C to abort
 #Authentication complete.
-#github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
 
 # 4. Use API
 gtoken <- config(token = github_token)
@@ -37,11 +37,19 @@ req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
 stop_for_status(req)
 content(req)
 
-# get answer:
-# [[30]]$created_at
-# [1] "2013-12-30T17:43:29Z"
+list(output[[5]]$name, output[[5]]$created_at)
 
-# OR:
+# get answer:
+#[[1]]
+#[1] "datasharing"
+
+#[[2]]
+#[1] "2013-11-07T13:25:07Z"
+
+# OR avoid nested
 req <- with_config(gtoken, GET("https://api.github.com/rate_limit"))
 stop_for_status(req)
 content(req)
+
+
+#Question 2
