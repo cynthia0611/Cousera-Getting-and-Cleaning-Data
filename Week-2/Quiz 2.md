@@ -5,7 +5,7 @@ library(httr)
 # if you register your own application on Github and got Client ID and Client Secret already,
 # it's fine to skip this step to find OAth
 
-    oauth_endpoints("github")
+oauth_endpoints("github")
 
 # 2. Register an application at https://github.com/settings/applications;
 # Use any URL you would like for the homepage URL (http://github.com is fine)
