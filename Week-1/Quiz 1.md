@@ -57,7 +57,7 @@
 
 ----------------------------------------------------------------------------    
 ####Question 2
-#####Use the data you loaded from Question 1. Consider the variable FES in the code book. Which of the "tidy data" principles does this variable violate? 
+######Use the data you loaded from Question 1. Consider the variable FES in the code book. Which of the "tidy data" principles does this variable violate? 
 
 **Tidy data has one variable per column.**
 ```
@@ -73,15 +73,15 @@ The tidy data:
 ```
 --------------------------------------------
 ####Question 3
-#####Download the Excel spreadsheet on Natural Gas Aquisition Program here:
+######Download the Excel spreadsheet on Natural Gas Aquisition Program here:
 
       https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx
 
-#####Read rows 18-23 and columns 7-15 into R and assign the result to a variable called:
+######Read rows 18-23 and columns 7-15 into R and assign the result to a variable called:
 
        dat 
 
-#####What is the value of:
+######What is the value of:
 
       sum(dat$Zip*dat$Ext,na.rm=T) 
 
