@@ -84,6 +84,27 @@ The tidy data:
 ######What is the value of:
 
       sum(dat$Zip*dat$Ext,na.rm=T) 
+```
+setwd('G:/Data Science Speciality Track/Getting and Cleaning Data/week1/quiz1')
+getwd()
+# fileurl<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx"
+# download.file(fileurl,destfile="./ngap.xlsx")
+Sys.setenv(JAVA_HOME='C://Program Files//Java//jdk1.7.0_40//jre')
+library(xlsx)
+list.files()
+ngapdata<-read.xlsx("./ngap.xlsx",sheetIndex=1,header=TRUE)
+colIndex<-7:15
+rowIndex<-18:23
+
+dat<-read.xlsx("./ngap.xlsx",sheetIndex=1, colIndex=colIndex, rowIndex=rowIndex)
+
+sum(dat$Zip*dat$Ext,na.rm=T) 
+# [1] 36534720
+```
+
+
+
+
 
 
 https://github.com/Xiaodan/Coursera-Getting-and-Cleaning-Data/blob/master/week1/week1.R
