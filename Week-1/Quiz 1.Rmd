@@ -101,8 +101,23 @@ dat<-read.xlsx("./ngap.xlsx",sheetIndex=1, colIndex=colIndex, rowIndex=rowIndex)
 sum(dat$Zip*dat$Ext,na.rm=T) 
 # [1] 36534720
 ```
+-----------------------------------------------------------------
+####Question 4
+#####Read the XML data on Baltimore restaurants from here: 
 
+      https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml 
 
+#####How many restaurants have zipcode 21231?
+```
+library(XML)
+fileurl<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
+balRes<-xmlTreeParse(fileUrl, useInternal=TRUE)
+balRes
+rootNode<-xmlRoot(balRes)
+xmlName(rootNode)
+names(rootNode)
+sum(xpathSApply(rootNode, "//zipcode", xmlValue)==21231)
+```
 
 
 
