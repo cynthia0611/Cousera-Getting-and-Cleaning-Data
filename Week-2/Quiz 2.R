@@ -45,7 +45,9 @@ list(output[[5]]$name, output[[5]]$created_at)
 
 #[[2]]
 #[1] "2013-11-07T13:25:07Z"
-------------------------------------
+
+# I found with JSON way, it's no need to repeat the steps above, 
+#just with lines below to find the answer for this question
 # How to get a dateframe and subset with this dataframe
 > library(jsonlite)
 > jsondata<-fromJSON("https://api.github.com/users/jtleek/repos")
