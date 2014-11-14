@@ -33,6 +33,15 @@ sum(dat$Zip*dat$Ext,na.rm=T)
 # [1] 36534720
 
 # Qeustion 4
+library(XML)
+fileurl<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
+balRes<-xmlTreeParse(fileUrl, useInternal=TRUE)
+balRes
+rootNode<-xmlRoot(balRes)
+xmlName(rootNode)
+names(rootNode)
+sum(xpathSApply(rootNode, "//zipcode", xmlValue)==21231)
+# 127
 
 # Qeustion 5
 
