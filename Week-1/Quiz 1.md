@@ -1,10 +1,10 @@
 ####Question 1
 
-   The American Community Survey distributes downloadable data about United States communities. Download the 2006 microdata survey about housing for the state of Idaho using download.file() from here:
+#####The American Community Survey distributes downloadable data about United States communities. Download the 2006 microdata survey about housing for the state of Idaho using download.file() from here:
 
    https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv 
 
-and load the data into R. The code book, describing the variable names is here:
+#####and load the data into R. The code book, describing the variable names is here:
 
    https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FPUMSDataDict06.pdf 
    
@@ -57,12 +57,34 @@ and load the data into R. The code book, describing the variable names is here:
 
 ----------------------------------------------------------------------------    
 ####Question 2
-Use the data you loaded from Question 1. Consider the variable FES in the code book. Which of the "tidy data" principles does this variable violate? 
+#####Use the data you loaded from Question 1. Consider the variable FES in the code book. Which of the "tidy data" principles does this variable violate? 
 
 **Tidy data has one variable per column.**
-
+```
+Explanation
+The tidy data:
+1. each variable you measure should be in one column
+2. each different observation of that variable should be in a different row
+3. there should be one table for each "kind" of variable
+4. if you have multiple tables, they should include a column in the table that allows them to be linked
+5. include a row at the top each file with variable name
+6. make variable names human readable AgeAtDiagnosis instead of AgeDx
+7. in general data should be saved in one file per table
+```
 --------------------------------------------
 ####Question 3
+#####Download the Excel spreadsheet on Natural Gas Aquisition Program here:
+
+      https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx
+
+#####Read rows 18-23 and columns 7-15 into R and assign the result to a variable called:
+
+       dat 
+
+#####What is the value of:
+
+      sum(dat$Zip*dat$Ext,na.rm=T) 
+
 
 https://github.com/Xiaodan/Coursera-Getting-and-Cleaning-Data/blob/master/week1/week1.R
 
