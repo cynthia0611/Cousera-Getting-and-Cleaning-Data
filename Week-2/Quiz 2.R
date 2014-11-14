@@ -36,21 +36,22 @@ gtoken <- config(token = github_token)
 # get the repo weblink: https://api.github.com/users/jtleek/repos using token
 req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
 stop_for_status(req)
-content(req)
+output<-content(req)
 
 list(output[[5]]$name, output[[5]]$created_at)
-
 # get answer:
 #[[1]]
 #[1] "datasharing"
 
 #[[2]]
 #[1] "2013-11-07T13:25:07Z"
-
-# OR avoid nested
-req <- with_config(gtoken, GET("https://api.github.com/rate_limit"))
-stop_for_status(req)
-content(req)
-
+------------------------------------
+# How to get a dateframe and subset with this dataframe
+> library(jsonlite)
+> jsondata<-fromJSON("https://api.github.com/users/jtleek/repos")
+> class(jsondata)
+[1] "data.frame"
+> jsondata$created_at[jsondata$name=="datasharing"]
+[1] "2013-11-07T13:25:07Z"
 
 #Question 2
