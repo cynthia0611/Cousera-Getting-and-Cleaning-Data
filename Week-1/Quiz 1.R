@@ -32,13 +32,13 @@ dat<-read.xlsx("./ngap.xlsx",sheetIndex=1, colIndex=colIndex, rowIndex=rowIndex)
 sum(dat$Zip*dat$Ext,na.rm=T) 
 # [1] 36534720
 
-# Qeustion 3
+# Qeustion 4
 
-# Qeustion 3
+# Qeustion 5
 
 
-# Qeustion 3
+# Qeustion 6
 
-# Qeustion 3
+# Qeustion 7
 
-# Qeustion 3
+# Qeustion 8
