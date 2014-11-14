@@ -1,0 +1,24 @@
+Getting and Cleaning Data
+# Week 1 Note
+
+
+# Joson
+> library(jsonlite)
+jsondata<- fromJSON("https://api.github.com/users/jtleek/repos")
+# get the name of Json data frame
+names(jsondata)
+# subset with data names
+names(jsondata$owner)
+# get data subset under the attribute of owner
+jsondata$owner$login
+# focus on the created_at subset
+jsondata$created_at
+# Writing data frames to JSON
+myjson<- toJSON(iris,pretty=TRUE)
+# print result using cat() function
+# because here are text variables, so we use cat()
+cat(myjson)
+# Convert back to JSON
+iris2<- fromJSON(myjson)
+class(iris2)#data frame
+head(iris2)
