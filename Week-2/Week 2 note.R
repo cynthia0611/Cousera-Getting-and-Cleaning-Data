@@ -134,5 +134,25 @@ google = handle("http://google.com")
 pg1 = GET(handle=google,path="/")
 pg2 = GET(handle=google,path="search")
 
+# getting and cleanning data 
+################################ from API
+# accessing twitter from R
+# httr package
+library(httr)
+library(jsonlite)
+library(rjson)
+myapp = oauth_app("twitter",
+                  key="1***********~lJ",secret="b***************cSrfcJ")
+sig = sign_oauth1.0(myapp,
+                    token = "1465************************h",
+                    token_secret = "5f****************o3KWwJ")
+homeTL = GET("https://api.twitter.com/1.1/statuses/home_timeline.json", sig)
+
+# Converting the json object
+json1 = content(homeTL)
+
+json2 = jsonlite::fromJSON(toJSON(json1))# doesn't work here, what's wrong?
+
+json1[1]
 
 
