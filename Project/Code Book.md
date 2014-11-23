@@ -33,7 +33,7 @@ Clean the column names of the subset. We remove the "()" and "-" symbols in the 
 Read the activity_labels.txt file from the "./data"" folder and store the data in a variable called activity.
 
 - vii.	**Clean the activity names in the second column of activity**
-- 
+
 Clean the activity names in the second column of activity. We first make all names to lower cases. If the name has an underscore between letters, we remove the underscore and capitalize the letter immediately after the underscore.
 
 - viii.	**Transform the values of joinLabel**
