@@ -8,7 +8,8 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 #####The run_analysis.R script performs the following steps to clean the data:
 
-- i.	**Read X_train.txt, y_train.txt and subject_train.txt** from the "./data/train" folder and store them in trainData,trainLabel and trainSubject variables respectively.
+- i.	**_Read training data set_**
+Read X_train.txt, y_train.txt and subject_train.txt from the "./data/train" folder and store them in trainData,trainLabel and trainSubject variables respectively.
 
 - ii.	Read X_test.txt, y_test.txt and subject_test.txt from the "./data/test" folder and store them in testData, testLabeland testsubject variables respectively.
 
